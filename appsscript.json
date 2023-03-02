@@ -1,0 +1,21 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Colorize SchoolCal",
+      "logoUrl": "https://drive.google.com/uc?id=1JiYV_BYtyR3f1EI_9c_E86iSmoxEbLwn",
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      }
+    },
+    "calendar": {}
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/calendar",
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/calendar.addons.execute"
+  ]
+}

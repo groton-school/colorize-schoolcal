@@ -1,0 +1,32 @@
+{
+  "name": "@groton/colorize-schoolcal",
+  "version": "1.0.0",
+  "description": "Google Calendar Add-on to set the block color of events synced by SchoolCal",
+  "main": "src/index.ts",
+  "scripts": {
+    "clean": "npx rimraf build",
+    "build": "npx webpack",
+    "deploy": "npx clasp push"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/groton-school"
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@battis/eslint-config": "github:battis/eslint-config",
+    "@battis/prettier-config": "github:battis/prettier-config",
+    "@battis/webpack-typescript-gas": "github:battis/webpack-typescript-gas",
+    "rimraf": "^4.1.3"
+  },
+  "dependencies": {
+    "@battis/gas-lighter": "github:battis/gas-lighter#dist"
+  },
+  "prettier": "@battis/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "@battis/eslint-config"
+    ]
+  }
+}

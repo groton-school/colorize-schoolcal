@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "experimentalDecorators": true,
+
+    "noImplicitAny": false,
+    "strictNullChecks": false
+  }
+}
