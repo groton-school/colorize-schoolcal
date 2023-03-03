@@ -33,13 +33,16 @@ export function onHomepage() {
         sections: [
             g.CardService.Card.newCardSection({
                 header: 'Set block Cclors',
-                widgets: Object.keys(blocks).map((code) =>
-                    g.CardService.Widget.newTextButton({
-                        text: `Colorize ${code}`,
-                        functionName: colorize,
-                        parameters: { code },
-                    })
-                ),
+                widgets: [
+                    'Set the color of synced events based on standard block colors.',
+                    ...Object.keys(blocks).map((code) =>
+                        g.CardService.Widget.newTextButton({
+                            text: `Colorize ${code}`,
+                            functionName: colorize,
+                            parameters: { code },
+                        })
+                    ),
+                ],
             }),
             g.CardService.Card.newCardSection({
                 header: 'Set arbitrary colors',
