@@ -47,7 +47,8 @@ export function onHomepage() {
             g.CardService.Card.newCardSection({
                 header: 'Set arbitrary colors',
                 widgets: [
-                    'Set the color of all synced events based on a search query. Caution: too broad a query will time out and fail!',
+                    'Set the color of all synced events based on a search query.',
+                    '<b>Caution:</b> too broad a query will time out and fail!',
                     CardService.newTextInput()
                         .setTitle('search query')
                         .setFieldName('query'),
