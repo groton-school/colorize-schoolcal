@@ -10,9 +10,22 @@ const blocks = {
     PR: '3',
 };
 
-function enumKeys<O extends object, K extends keyof O = keyof O>(obj: O): K[] {
-    return Object.keys(obj).filter((k) => Number.isNaN(+k)) as K[];
-}
+const colorize = 'colorize';
+global.colorize = ({
+    parameters: { code = null },
+    formInput: { query = null, color = null },
+}) => {
+    color = query && color;
+    const user = Session.getActiveUser();
+    const calendar = CalendarApp.getCalendarsByName(user.getEmail())[0];
+    const events = calendar.getEvents(
+        new Date('2023-01-01'),
+        new Date('2023-06-30'),
+        { author: 'schoolcal@groton.org', search: query || `- ${code}` }
+    );
+    events.forEach((event) => event.setColor(color || blocks[code]));
+    return g.CardService.Navigation.replaceStack(onHomepage());
+};
 
 export function onHomepage() {
     return g.CardService.Card.create({
@@ -23,7 +36,7 @@ export function onHomepage() {
                 widgets: Object.keys(blocks).map((code) =>
                     g.CardService.Widget.newTextButton({
                         text: `Colorize ${code}`,
-                        functionName: 'colorize',
+                        functionName: colorize,
                         parameters: { code },
                     })
                 ),
@@ -52,26 +65,10 @@ export function onHomepage() {
                         .addItem('Red', '11', false),
                     g.CardService.Widget.newTextButton({
                         text: 'Colorize',
-                        functionName: 'colorize',
+                        functionName: colorize,
                     }),
                 ],
             }),
         ],
     });
 }
-
-global.colorize = ({
-    parameters: { code = null },
-    formInput: { query = null, color = null },
-}) => {
-    color = query && color;
-    const user = Session.getActiveUser();
-    const calendar = CalendarApp.getCalendarsByName(user.getEmail())[0];
-    const events = calendar.getEvents(
-        new Date('2023-01-01'),
-        new Date('2023-06-30'),
-        { author: 'schoolcal@groton.org', search: query || `- ${code}` }
-    );
-    events.forEach((event) => event.setColor(color || blocks[code]));
-    return g.CardService.Navigation.replaceStack(onHomepage());
-};
