@@ -18,10 +18,15 @@ global.colorize = ({
   color = query && color;
   const user = Session.getActiveUser();
   const calendar = CalendarApp.getCalendarsByName(user.getEmail())[0];
+  const now = new Date();
+  let year = now.getFullYear();
+  if (now.getMonth() <= 6) {
+    year = year - 1;
+  }
   const events = calendar.getEvents(
-    new Date('2023-01-01'),
-    new Date('2023-06-30'),
-    { author: 'schoolcal@groton.org', search: query || `- ${code}` }
+    new Date(`${year}-09-01`),
+    new Date(`${year + 1}-06-20`),
+    { author: process.env.SERVICE_ACCOUNT, search: query || `- ${code}` }
   );
   events.forEach((event) => event.setColor(color || blocks[code]));
   return g.CardService.Navigation.replaceStack(onHomepage());
