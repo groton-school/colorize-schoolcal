@@ -1,14 +1,32 @@
 import g from '@battis/gas-lighter';
 
-const blocks = {
-  RD: '11',
-  OR: '6',
-  YL: '5',
-  GR: '2',
-  LB: '7',
-  DB: '9',
-  PR: '3'
+const colors = {
+  'Pale Blue': '1',
+  'Pale Green': '2',
+  Mauve: '3',
+  'Pale Red': '4',
+  Yellow: '5',
+  Orange: '6',
+  Cyan: '7',
+  Gray: '8',
+  Blue: '9',
+  Green: '10',
+  Red: '11'
 };
+
+const blocks = {
+  RD: colors.Red,
+  OR: colors.Orange,
+  YL: colors.Yellow,
+  GR: colors.Green,
+  LB: colors.Cyan,
+  DB: colors.Blue,
+  PR: colors.Mauve
+};
+
+function colorName(value) {
+  return Object.keys(colors).find((key) => colors[key] === value);
+}
 
 const colorize = 'colorize';
 global.colorize = ({
@@ -33,6 +51,13 @@ global.colorize = ({
 };
 
 export function onHomepage() {
+  const colorsSelect = CardService.newSelectionInput()
+    .setTitle('color')
+    .setFieldName('color')
+    .setType(CardService.SelectionInputType.DROPDOWN);
+  Object.keys(colors).forEach((color) =>
+    colorsSelect.addItem(color, colors[color], false)
+  );
   return g.CardService.Card.create({
     name: 'Colorize SchoolCal',
     sections: [
@@ -57,21 +82,7 @@ export function onHomepage() {
           CardService.newTextInput()
             .setTitle('search query')
             .setFieldName('query'),
-          CardService.newSelectionInput()
-            .setTitle('color')
-            .setFieldName('color')
-            .setType(CardService.SelectionInputType.DROPDOWN)
-            .addItem('Pale Blue', '1', false)
-            .addItem('Pale Green', '2', false)
-            .addItem('Mauve', '3', false)
-            .addItem('Pale Red', '4', false)
-            .addItem('Yellow', '5', false)
-            .addItem('Orange', '6', false)
-            .addItem('Cyan', '7', false)
-            .addItem('Gray', '8', false)
-            .addItem('Blue', '9', false)
-            .addItem('Green', '10', false)
-            .addItem('Red', '11', false),
+          colorsSelect,
           g.CardService.Widget.newTextButton({
             text: 'Colorize',
             functionName: colorize
