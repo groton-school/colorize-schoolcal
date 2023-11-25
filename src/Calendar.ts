@@ -64,6 +64,9 @@ export function onHomepage() {
       g.CardService.Card.newCardSection({
         header: 'Set block Cclors',
         widgets: [
+          CardService.newImage().setImageUrl(
+            'https://groton-school.github.io/colorize-schoolcal/store/card-assets/card.png'
+          ),
           'Set the color of synced events based on standard block colors.',
           ...Object.keys(blocks).map((code) =>
             g.CardService.Widget.newTextButton({
