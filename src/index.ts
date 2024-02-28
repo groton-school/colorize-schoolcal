@@ -1,3 +1,3 @@
-import * as Calendar from './Calendar';
+import * as Colorize from './Colorize';
 
-global.onHomepage = Calendar.onHomepage;
+global.onHomepage = Colorize.onHomepage;
