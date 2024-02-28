@@ -22,7 +22,13 @@ const BLOCK_COLORS = {
   GR: CalendarApp.EventColor.GREEN,
   LB: CalendarApp.EventColor.CYAN,
   DB: CalendarApp.EventColor.BLUE,
-  PR: CalendarApp.EventColor.MAUVE
+  PR: CalendarApp.EventColor.MAUVE,
+  'W)': CalendarApp.EventColor.BLUE,
+  'X)': CalendarApp.EventColor.YELLOW,
+  'Y)': CalendarApp.EventColor.ORANGE,
+  'Z)': CalendarApp.EventColor.GREEN,
+  WX: CalendarApp.EventColor.BLUE,
+  YZ: CalendarApp.EventColor.ORANGE
 };
 
 const MAX_BATCH_REQUESTS = 50; // undocumented
@@ -32,8 +38,8 @@ let year = now.getFullYear();
 if (now.getMonth() <= 6) {
   year = year - 1;
 }
-const EVENT_WINDOW_START = `July 1, ${year} 12:00 AM EDT`;
-const EVENT_WINDOW_END = `July 1, ${year + 1} 12:00 AM EDT`;
+const EVENT_WINDOW_START = `June 15, ${year} 12:00 AM EDT`;
+const EVENT_WINDOW_END = `June 15, ${year + 1} 12:00 AM EDT`;
 
 const colorize = 'colorize';
 global.colorize = ({ formInput: { query = null, color = null } }) => {
