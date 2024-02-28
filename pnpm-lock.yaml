@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@battis/gas-lighter':
-    specifier: file:../gas-lighter
-    version: file:../gas-lighter
+    specifier: ^0.5.1
+    version: 0.5.1
   '@types/node':
-    specifier: ^20.11.21
-    version: 20.11.21
+    specifier: ^20.11.22
+    version: 20.11.22
 
 devDependencies:
   '@battis/eslint-config':
@@ -174,6 +174,33 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@battis/gas-lighter@0.5.1:
+    resolution: {integrity: sha512-nCorGKrgThSwJ0Xmza+uCkdzZbMCTnAXAnyHablVv0DouNU3whNlKnhzB9r83qQQiW+OZ/NpNj4TCaq29IyzfQ==}
+    engines: {node: '>=12.17'}
+    dependencies:
+      '@battis/typescript-tricks': 0.5.0
+      '@google/clasp': 2.4.2
+      '@tsconfig/recommended': 1.0.3
+      '@types/google-apps-script': 1.0.82
+      '@types/node': 18.19.20
+      app-root-path: 3.1.0
+      clean-webpack-plugin: 4.0.0(webpack@5.90.3)
+      gas-webpack-plugin: 2.5.0
+      ts-loader: 9.5.1(typescript@4.9.5)(webpack@5.90.3)
+      typescript: 4.9.5
+      webpack: 5.90.3(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.90.3)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@webpack-cli/generators'
+      - encoding
+      - esbuild
+      - supports-color
+      - uglify-js
+      - webpack-bundle-analyzer
+      - webpack-dev-server
+    dev: false
 
   /@battis/prettier-config@1.3.0:
     resolution: {integrity: sha512-DCKwVp9MK+pkD1UqjgPCgz6gc91sRxzJ7F87Su05bK7Ec+ujMUW3ytzZebre5ZzJEhx4LFk0enz3f7UzRAYLdw==}
@@ -402,7 +429,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       '@types/responselike': 1.0.3
 
   /@types/eslint-scope@3.7.7:
@@ -424,7 +451,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
     dev: false
 
   /@types/google-apps-script@1.0.82:
@@ -440,7 +467,7 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
 
   /@types/mdast@3.0.15:
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
@@ -455,14 +482,14 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: false
 
-  /@types/node@18.19.19:
-    resolution: {integrity: sha512-qqV6hSy9zACEhQUy5CEGeuXAZN0fNjqLWRIvOXOwdFYhFoKBiY08VKR5kgchr90+TitLVhpUEb54hk4bYaArUw==}
+  /@types/node@18.19.20:
+    resolution: {integrity: sha512-SKXZvI375jkpvAj8o+5U2518XQv76mAsixqfXiVyWyXZbVWQK25RurFovYpVIxVzul0rZoH58V/3SkEnm7s3qA==}
     dependencies:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@20.11.21:
-    resolution: {integrity: sha512-/ySDLGscFPNasfqStUuWWPfL78jompfIoVzLJPVVAHBh6rpG68+pI2Gk+fNLeI8/f1yPYL4s46EleVIc20F1Ow==}
+  /@types/node@20.11.22:
+    resolution: {integrity: sha512-/G+IxWxma6V3E+pqK1tSl2Fo1kl41pK1yeCyDsgkF9WlVAme4j5ISYM2zR11bgLFJGLN5sVK40T4RJNuiZbEjA==}
     dependencies:
       undici-types: 5.26.5
 
@@ -472,7 +499,7 @@ packages:
   /@types/responselike@1.0.3:
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
 
   /@types/semver@7.5.8:
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -996,7 +1023,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001591
-      electron-to-chromium: 1.4.685
+      electron-to-chromium: 1.4.686
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -1380,8 +1407,8 @@ packages:
     dependencies:
       safe-buffer: 5.2.1
 
-  /electron-to-chromium@1.4.685:
-    resolution: {integrity: sha512-yDYeobbTEe4TNooEzOQO6xFqg9XnAkVy2Lod1C1B2it8u47JNLYvl9nLDWBamqUakWB8Jc1hhS1uHUNYTNQdfw==}
+  /electron-to-chromium@1.4.686:
+    resolution: {integrity: sha512-3avY1B+vUzNxEgkBDpKOP8WarvUAEwpRaiCL0He5OKWEFxzaOFiq4WoZEZe7qh0ReS7DiWoHMnYoQCKxNZNzSg==}
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2459,7 +2486,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -4098,31 +4125,3 @@ packages:
   /yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
-
-  file:../gas-lighter:
-    resolution: {directory: ../gas-lighter, type: directory}
-    name: '@battis/gas-lighter'
-    engines: {node: '>=12.17'}
-    dependencies:
-      '@battis/typescript-tricks': 0.5.0
-      '@google/clasp': 2.4.2
-      '@tsconfig/recommended': 1.0.3
-      '@types/google-apps-script': 1.0.82
-      '@types/node': 18.19.19
-      app-root-path: 3.1.0
-      clean-webpack-plugin: 4.0.0(webpack@5.90.3)
-      gas-webpack-plugin: 2.5.0
-      ts-loader: 9.5.1(typescript@4.9.5)(webpack@5.90.3)
-      typescript: 4.9.5
-      webpack: 5.90.3(webpack-cli@5.1.4)
-      webpack-cli: 5.1.4(webpack@5.90.3)
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@webpack-cli/generators'
-      - encoding
-      - esbuild
-      - supports-color
-      - uglify-js
-      - webpack-bundle-analyzer
-      - webpack-dev-server
-    dev: false
