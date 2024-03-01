@@ -1,5 +1,5 @@
-import Events from './Calendar/v3/Events';
 import g from '@battis/gas-lighter';
+import Calendar from '@battis/google.calendar';
 
 const COLOR_NAMES = {
   'Pale Blue': CalendarApp.EventColor.PALE_BLUE,
@@ -53,7 +53,7 @@ global.colorize = ({ formInput: { query = null, color = null } }) => {
     process.env.SERVICE_ACCOUNT
   }`;
 
-  let response: Events;
+  let response: Calendar.v3.Events;
 
   do {
     response = JSON.parse(

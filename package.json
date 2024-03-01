@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@battis/gas-lighter": "^0.5.1",
+    "@battis/google.calendar": "^0.1.0",
     "@types/node": "^20.11.22"
   },
   "prettier": "@battis/prettier-config",

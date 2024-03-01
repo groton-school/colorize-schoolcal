@@ -8,6 +8,9 @@ dependencies:
   '@battis/gas-lighter':
     specifier: ^0.5.1
     version: 0.5.1
+  '@battis/google.calendar':
+    specifier: ^0.1.0
+    version: 0.1.0
   '@types/node':
     specifier: ^20.11.22
     version: 20.11.22
@@ -200,6 +203,12 @@ packages:
       - uglify-js
       - webpack-bundle-analyzer
       - webpack-dev-server
+    dev: false
+
+  /@battis/google.calendar@0.1.0:
+    resolution: {integrity: sha512-4u6vtzziLbjYkhqoL0z6RY9y57tCGn4dQdOgavZ/DVhHkCUniSjFhlZZGOmH64lYEEtcJ2T8fD7l3cuOm5qKuw==}
+    dependencies:
+      '@tsconfig/recommended': 1.0.3
     dev: false
 
   /@battis/prettier-config@1.3.0:
