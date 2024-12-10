@@ -2,6 +2,12 @@
   "name": "@groton/colorize-schoolcal",
   "version": "0.1.4",
   "description": "Google Calendar Add-on to set the block color of events synced by SchoolCal",
+  "keywords": [],
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/groton-school"
+  },
   "main": "src/index.ts",
   "scripts": {
     "build": "webpack",
@@ -9,27 +15,22 @@
     "deploy:build": "npm run build",
     "deploy:push": "clasp push --force"
   },
-  "keywords": [],
-  "author": {
-    "name": "Seth Battis",
-    "url": "https://github.com/groton-school"
-  },
-  "license": "GPL-3.0",
-  "devDependencies": {
-    "@battis/eslint-config": "latest",
-    "@battis/prettier-config": "latest",
-    "@google/clasp": "^2.4.2",
-    "dotenv-webpack": "^8.0.1",
-    "npm-run-all": "^4.1.5"
-  },
-  "dependencies": {
-    "@battis/gas-lighter": "^0.3.2",
-    "@types/node": "^20.5.0"
-  },
   "prettier": "@battis/prettier-config",
   "eslintConfig": {
     "extends": [
       "@battis/eslint-config"
     ]
+  },
+  "dependencies": {
+    "@battis/gas-lighter": "^0.3.5",
+    "@types/node": "^20.17.9"
+  },
+  "devDependencies": {
+    "@battis/eslint-config": "^2.0.1",
+    "@battis/prettier-config": "^1.5.5",
+    "@changesets/cli": "^2.27.10",
+    "@google/clasp": "^2.4.2",
+    "dotenv-webpack": "^8.1.0",
+    "npm-run-all": "^4.1.5"
   }
 }
