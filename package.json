@@ -22,7 +22,7 @@
     ]
   },
   "dependencies": {
-    "@battis/gas-lighter": "^0.3.5",
+    "@battis/gas-lighter": "^0.5.2",
     "@types/node": "^22.10.1"
   },
   "devDependencies": {
