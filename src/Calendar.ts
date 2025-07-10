@@ -26,7 +26,7 @@ global.colorize = ({
   const events = calendar.getEvents(
     new Date(`${year}-09-01`),
     new Date(`${year + 1}-06-20`),
-    { author: process.env.SERVICE_ACCOUNT, search: query || ` (${code}` }
+    { author: SERVICE_ACCOUNT, search: query || ` (${code}` }
   );
   events.forEach((event) => event.setColor(color || blocks[code]));
   return g.CardService.Navigation.replaceStack(onHomepage());
