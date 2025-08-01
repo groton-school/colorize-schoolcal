@@ -23,7 +23,7 @@
     "@types/node": "^24.0.12"
   },
   "devDependencies": {
-    "@battis/eslint-config": "^2.0.4",
+    "@battis/eslint-config": "^2.0.5",
     "@battis/prettier-config": "^1.6.4",
     "@google/clasp": "^2.5.0",
     "commit-and-tag-version": "^12.5.1",
