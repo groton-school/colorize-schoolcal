@@ -1,6 +1,6 @@
 {
   "name": "@groton/colorize-schoolcal",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Google Calendar Add-on to set the block color of events synced by SchoolCal",
   "keywords": [],
   "license": "GPL-3.0",
