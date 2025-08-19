@@ -10,7 +10,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "build": "op run --env-file ./.env -- webpack",
+    "build": "webpack",
     "deploy": "run-s deploy:*",
     "deploy:build": "run-s build",
     "deploy:inject": "op inject -i ./.clasp.json.tpl -o ./.clasp.json",
