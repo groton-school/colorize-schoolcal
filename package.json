@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@battis/gas-lighter": "^0.5.2",
-    "@types/node": "^24.3.0"
+    "@types/node": "^24.7.0"
   },
   "devDependencies": {
     "@battis/eslint-config": "^2.0.5",
